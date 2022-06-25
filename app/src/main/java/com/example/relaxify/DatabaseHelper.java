@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String TAG = "DatabaseHelper";
@@ -37,12 +36,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL2, item);
 
-//        database.execSQL("DELETE FROM " + TABLE_NAME);
-        //^^ delete everthing, broken data
-
-
-        Log.d(TAG, "addData: Adding " + item.toString()+ " to " + TABLE_NAME);
-
         long result = database.insert(TABLE_NAME, null, contentValues);
 
         //if date as inserted incorrectly it will return -1
@@ -64,8 +57,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String query = "DELETE FROM " + TABLE_NAME + " WHERE "
                 + COL1 + " = '" + id + "'" +
                 " AND " + COL2 + " = '" + text + "'";
-        Log.d(TAG, "deleteName: query: " + query);
-        Log.d(TAG, "deleteName: Deleting " + text + " from database.");
+
         database.execSQL(query);
     }
     public Cursor getData(){

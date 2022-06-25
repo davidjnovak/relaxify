@@ -48,9 +48,6 @@ public class JournalList extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String data = adapterView.getItemAtPosition(i).toString();
-
-                Log.d(TAG, "onItemClick: You Clicked on " + data);
-
                 Cursor cursorData = myHelper.getItemID(data); //get the id associated with that data
                 int itemID = -1;
                 while (cursorData.moveToNext()) {

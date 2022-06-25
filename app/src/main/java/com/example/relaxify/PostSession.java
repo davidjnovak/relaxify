@@ -10,15 +10,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.FileWriter;
-import java.io.PrintWriter;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.List;
-
 public class PostSession extends AppCompatActivity {
     DatabaseHelper myHelper;
     public String escapeData(String data){
@@ -40,12 +31,10 @@ public class PostSession extends AppCompatActivity {
         setContentView(R.layout.activity_post_session);
         Intent recievedIntent = getIntent();
         myHelper = new DatabaseHelper(this);
-        String stringData;
 
         //data to be added to database------------
         String time = recievedIntent.getStringExtra("duration");
         EditText journal = (EditText) findViewById(R.id.journal);
-        String currentTime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());
         TextView summary = (TextView) findViewById(R.id.summary);
         summary.setText("Congrats!\nYou meditated for " + time);
 

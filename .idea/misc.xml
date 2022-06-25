@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/David/AndroidStudioProjects/project392/project392/Relaxify/app/src/main/res/drawable/menu_vector.xml" value="0.2555" />
         <entry key="..\:/Users/David/AndroidStudioProjects/project392/project392/Relaxify/app/src/main/res/drawable/splashscreen.xml" value="0.1" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/project392/project392/Relaxify/app/src/main/res/drawable/splashscreen1.xml" value="0.2555" />
         <entry key="..\:/Users/David/AndroidStudioProjects/project392/project392/Relaxify/app/src/main/res/layout/activity_about.xml" value="0.25" />
         <entry key="..\:/Users/David/AndroidStudioProjects/project392/project392/Relaxify/app/src/main/res/layout/activity_home.xml" value="0.1765625" />
         <entry key="..\:/Users/David/AndroidStudioProjects/project392/project392/Relaxify/app/src/main/res/layout/activity_journal_list.xml" value="0.165625" />
